@@ -6,7 +6,7 @@ This folder recreates the portfolio with its served UI bundle, 3D scenes, textur
 
 After the first deployment completes, the site is available at:
 
-<https://dev-sudeep018.github.io/they-call-me-giulio-clone/>
+<https://dev-sudeep018.github.io/1to1copy/>
 
 ## Run locally
 
