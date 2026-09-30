@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./site.webmanifest" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no"
+    />
+    <title>They Call Me Giulio :: Creative Technologist & Developer</title>
+    <meta
+      name="title"
+      content="They Call Me Giulio :: Creative Technologist & Developer"
+    />
+    <meta
+      name="description"
+      content="The portfolio of Giulio, a Creative Technologist building high-performance digital experiences through interactive design and advanced front-end engineering"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dev-sudeep018.github.io/they-call-me-giulio-clone/" />
+    <meta
+      property="og:title"
+      content="They Call Me Giulio :: Creative Technologist"
+    />
+    <meta
+      property="og:description"
+      content="Creative Technologist building high-performance digital experiences through interactive design and advanced front-end engineering"
+    />
+    <meta
+      property="og:image"
+      content="https://dev-sudeep018.github.io/they-call-me-giulio-clone/og_image.jpg"
+    />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://dev-sudeep018.github.io/they-call-me-giulio-clone/" />
+    <meta
+      property="twitter:title"
+      content="They Call Me Giulio :: Creative Technologist"
+    />
+    <meta
+      property="twitter:description"
+      content="Designing and developing the next generation of web experiences."
+    />
+    <meta
+      property="twitter:image"
+      content="https://dev-sudeep018.github.io/they-call-me-giulio-clone/social-preview.jpg"
+    />
+
+    <script>
+      history.scrollRestoration = "manual"
+    </script>
+    <style>
+      #tcmg-loader-wrapper {
+        position: fixed;
+        inset: 0;
+        background-color: #000;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #tcmg-loader-wrap {
+        position: relative;
+        display: inline-block;
+      }
+      #tcmg-loader {
+        filter: blur(20px);
+        outline: none;
+        object-fit: contain;
+      }
+      #tcmg-loader-caption {
+        position: absolute;
+        top: 10%;
+        left: 0;
+        z-index: 1001;
+        padding: 12px 16px;
+        color: #30383e;
+        line-height: 1.4;
+        max-width: 240px;
+        opacity: 0;
+      }
+      #tcmg-loader-text {
+        opacity: 0;
+        color: #566e7f;
+        position: fixed;
+        top: auto;
+        bottom: 10%;
+        z-index: 1001;
+        max-width: 400px;
+      }
+      .tcmg-highlight {
+        color: #7f9eb3;
+      }
+      #tcmg-loader-percentage {
+        color: #d9eaf5;
+      }
+      #enter-cta {
+        margin-top: 48px;
+        padding: 14px 48px;
+        background-color: transparent;
+        color: #d9eaf5;
+        position: relative;
+        cursor: pointer;
+        letter-spacing: 0.1em;
+        transition: opacity 1s ease;
+      }
+      #enter-cta:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+      #enter-cta span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.1);
+        transition: background-color 0.3s ease;
+      }
+      #enter-cta:not(:disabled):hover span {
+        background-color: rgba(255, 255, 255, 0.3);
+      }
+      #enter-cta span:nth-child(1) {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+      }
+      #enter-cta span:nth-child(2) {
+        top: 0;
+        left: auto;
+        right: 0;
+        width: 1px;
+        height: 100%;
+      }
+      #enter-cta span:nth-child(3) {
+        top: auto;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+      }
+      #enter-cta span:nth-child(4) {
+        top: 0;
+        left: 0;
+        width: 1px;
+        height: 100%;
+      }
+
+      #enter-cta span:before {
+        top: 0;
+        left: 0;
+        width: 2px;
+        height: 2px;
+        background-color: white;
+        content: "";
+        position: absolute;
+      }
+      #enter-cta span:nth-child(3):before {
+        left: auto;
+        right: 0;
+      }
+      #enter-cta span:nth-child(4):before {
+        top: auto;
+        bottom: 0;
+      }
+      @media (max-width: 768px) {
+        #tcmg-loader-text {
+          left: 32px;
+          right: 32px;
+          width: auto;
+          max-width: none;
+          font-size: 14px;
+        }
+        #tcmg-loader-caption {
+          top: 0;
+          font-size: 14px;
+        }
+      }
+      @media (orientation: portrait) and (min-width: 769px) {
+        #tcmg-loader {
+          width: 100vw;
+          height: auto;
+        }
+        #tcmg-loader-text {
+          right: 0;
+        }
+      }
+      @media (orientation: landscape) {
+        #tcmg-loader {
+          width: auto;
+          height: 100vh;
+        }
+        #tcmg-loader-text {
+          right: calc(50% - 50vh);
+        }
+      }
+    </style>
+    <script type="module" crossorigin src="./assets/index-CLAoWNif.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-D3FYv9Ve.css">
+  </head>
+  <body style="background-color: #000">
+    <div id="tcmg-loader-wrapper">
+      <div id="tcmg-loader-wrap">
+        <div id="tcmg-loader-caption" data-font-bold>
+          <p>[[</p>
+          <p>&nbsp;&nbsp;&nbsp;[<span class="tcmg-highlight">loading</span>]</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;]]]</p>
+          <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span
+              id="tcmg-loader-percentage"
+              >00%</span
+            >]
+          </p>
+          <p>&nbsp;&nbsp;[[[][]</p>
+        </div>
+        <img
+          id="tcmg-loader"
+          alt="They Call Me Giulio v5.0"
+          src="./tcmg-loader.avif"
+          fetchpriority="high"
+        />
+      </div>
+    </div>
+    <div id="tcmg-loader-text" data-font-bold>
+      <p>Technology accelerates time.</p>
+      <p>Emotions slow it down, transmuting it into memory.</p>
+      <p style="margin-top: 16px">I'm a Creative Technologist.</p>
+      <p style="margin-top: 32px" class="tcmg-highlight">
+        They call me Giulio.
+      </p>
+
+      <button id="enter-cta" disabled>
+        ENTER <span></span><span></span><span></span><span></span>
+      </button>
+    </div>
+    <div id="root"></div>
+  </body>
+</html>
